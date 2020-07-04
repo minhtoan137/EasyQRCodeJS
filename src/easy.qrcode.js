@@ -173,7 +173,7 @@
                     if ((0 <= r && r <= 6 && (c == 0 || c == 6)) || (0 <= c && c <= 6 && (r == 0 || r == 6)) ||
                         (2 <= r && r <= 4 &&
                             2 <= c && c <= 4)) {
-                        this.modules[row + r][col + c][0] = 123;
+                        this.modules[row + r][col + c][0] = true;
 
                         this.modules[row + r][col + c][2] = posName; // Position
                         if (r == -0 || c == -0 || r == 6 || c == 6) {
@@ -182,7 +182,7 @@
                             this.modules[row + r][col + c][1] = 'I'; // Position Inner
                         }
                     } else {
-                        this.modules[row + r][col + c][0] = 456;
+                        this.modules[row + r][col + c][0] = false;
                     }
                 }
             }
@@ -247,7 +247,7 @@
                     for (var r = -2; r <= 2; r++) {
                         for (var c = -2; c <= 2; c++) {
                             if (r == -2 || r == 2 || c == -2 || c == 2 || (r == 0 && c == 0)) {
-                                this.modules[row + r][col + c][0] = 123;
+                                this.modules[row + r][col + c][0] = true;
                                 this.modules[row + r][col + c][2] = posName; // Position
                                 if (r == -2 || c == -2 || r == 2 || c == 2) {
                                     this.modules[row + r][col + c][1] = 'O'; // Position Outer
@@ -255,7 +255,7 @@
                                     this.modules[row + r][col + c][1] = 'I'; // Position Inner
                                 }
                             } else {
-                                this.modules[row + r][col + c][0] = 456;
+                                this.modules[row + r][col + c][0] = false;
                             }
                         }
                     }
